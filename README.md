@@ -3,18 +3,11 @@
 ## Tracker Hardware Setup
 1. Purchase components:
 
-Quantity
-	Item
-	1
-	Adafruit Feather M0 with LoRa radio - 900 MHz
-https://www.adafruit.com/product/3178
-	1
-	Adafruit Flora Wearable Ultimate GPS module
-https://www.adafruit.com/product/1059
-	1
-	Lithium Ion Polymer Battery 3.7v 500mAh
-https://www.adafruit.com/product/1578
-	
+| Quantity | Item |
+| ------------- | ------------- |
+| 1  | Adafruit Feather M0 with LoRa radio - 900 MHz https://www.adafruit.com/product/3178  |
+| 1  | Adafruit Flora Wearable Ultimate GPS module https://www.adafruit.com/product/1059  |
+| 1  | Lithium Ion Polymer Battery 3.7v 500mAh https://www.adafruit.com/product/1578  |	
 
 2. Download the .PcbDoc and .Sch files from Github
 3. Export and download gerber files for printing or ordering of PCB
@@ -24,17 +17,12 @@ ________________
 
 PCB connections
 
-Adafruit Feather M0
-	GPS module
-	TX
-	RX
-	RX
-	TX
-	3.3V 
-	3.3V
-	GND
-	GND
-	
+| Adafruit Feather M0 | GPS Module |
+| ------------- | ------------- |
+| TX  | RX  |
+| RX  | TX  |
+| 3.3V  | 3.3V  |
+| GND  | GND  |
 
    5. Download .STEP files from GitHub
    6. 3D print the main casing as well as the cover, use M3 bolt and nut to attach components
