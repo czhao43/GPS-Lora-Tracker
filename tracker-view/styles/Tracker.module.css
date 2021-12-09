@@ -1,0 +1,29 @@
+.btn {
+    width: 90px;
+    padding: 3px 0;
+    margin: 10px;
+    background: #4789d4;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+}
+.title {
+color: #333;
+padding-bottom: 20px;
+text-align: center;
+}
+.text {
+color: #777;
+}
+.input {
+    width: 60px
+}
+.formElem{
+    align-items: center;
+}
+.trackerMain {
+    padding: 10px;
+    border-top: 3px solid #dfa958;
+    border-bottom: 3px solid #dfa958;
+    border-right: 3px solid #dfa958;
+}
