@@ -67,18 +67,24 @@ PCB connections
 The gateway is currently set up to handle 3 trackers. However you can copy and paste a few lines of code to support more trackers if desired. For example if you wanted to add a fourth tracker with trackerID = 3, this is how to do so:
    1. Open the file “LoraGateway_PowerSaving.ino” through the Arduino IDE
    2. In the variables at the top, create a new variable to support the ping interval for your new tracker:
-String newPingInterval3 = "";
+      ```
+      String newPingInterval3 = "";
+      ```
    3. In the function void loop() {} under the comment “//check if there is a request to change the tracker's ping interval”, copy and paste one of the else if {} statements: 
-else if (receivedTrackerID.equals("3") && !newPingInterval3.equals("")) {
-      Serial.println("sending lora signal to tracker " + receivedTrackerID + " to change the ping interval to " + newPingInterval3);
-      LoRa_sendMessage(receivedTrackerID + "," + newPingInterval3);
-      newPingInterval3 = "";
-    }
+      ```
+      else if (receivedTrackerID.equals("3") && !newPingInterval3.equals("")) {
+         Serial.println("sending lora signal to tracker " + receivedTrackerID + " to change the ping interval to " + newPingInterval3);
+         LoRa_sendMessage(receivedTrackerID + "," + newPingInterval3);
+         newPingInterval3 = "";
+       }
+       ```
    4. Right before the end of the void loop() {} function after the comment “//update the correct interval based on trackerID”, copy and paste one of the else if {} statements:
-else if(trackerID.equals("3")) {
+      ```
+      else if(trackerID.equals("3")) {
         newPingInterval3 = newInterval;
         Serial.print("new interval for tracker 3 ready to be set: "); Serial.println(newPingInterval3);
       }
+      ```
    5. Save the file, and re-flash the code onto the T-Beam gateway (see Gateway Side Software Setup for instructions).
    6. Now, you can set up a new tracker with trackerID = 3 that will be supported by the gateway (see Tracker Side Software Setup for instructions).
 
